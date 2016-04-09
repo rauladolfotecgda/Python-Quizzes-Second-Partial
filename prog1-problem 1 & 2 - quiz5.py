@@ -26,4 +26,4 @@ for i in range(a):
 
 word = str(input("Please give me a word: "))
 print(find_three_numbers(z))
-print(is_palindrome(word)\"´")
+print(is_palindrome(word))
