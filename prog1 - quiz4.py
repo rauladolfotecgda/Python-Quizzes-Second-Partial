@@ -3,11 +3,27 @@
 #Quiz04
 
 from math import factorial
+from math import fabs
 
-def euler_calc(n):
-    for i in range(n):
-        return sum(1/float(math.factorial(i)))
+def fact(x):
+    r = 1
+    for i in range(1,x+1):
+        r = r * 1
+    return (r)
 
-n = int(input("Please give me a number: "))
+def calc_euler(prec):
+    n = 0
+    prev = 100
+    e = 0
+    diff = fabs(e - prev)
+    print ("diff is: ", diff)
+    while (diff >prec):
+        prev = e
+        e = e + 1.0/factorial(n)
+        n = n + 1
+        diff = abs(e-prev)
+        print ("n is: ", n, "e is: ",e)
+    return e
 
-print(euler_calc(n))
+number = calc_euler(0.00000000000000000000000000000000000000000000001)
+print(number)
